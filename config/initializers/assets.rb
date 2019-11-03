@@ -12,3 +12,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w( games/omikuji.js )
+Rails.application.config.assets.precompile += %w( games/quize.js )
+Rails.application.config.assets.precompile += %w( games/slot.js )
+Rails.application.config.assets.precompile += %w( games/timer.js )
+Rails.application.config.assets.precompile += %w( games/touch.js )
