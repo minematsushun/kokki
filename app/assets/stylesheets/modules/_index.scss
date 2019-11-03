@@ -1,0 +1,27 @@
+.gamesBtn {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 60%;
+  margin: 20px auto;
+  .gameBtn {
+    border: 1px solid #555;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .level1:hover{
+    background: $blue1;
+  }
+  .level2:hover{
+    background: $green1;
+  }
+  .level3:hover{
+    background: $yellow1;
+  }
+  .level4:hover{
+    background: $orange1;
+  }
+  .level5:hover{
+    background: $red1;
+  }
+}
