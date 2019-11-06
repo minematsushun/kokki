@@ -6,6 +6,7 @@
   const btn = document.getElementById('btn');
   const result = document.getElementById('result');
   const scoreLabel = document.querySelector('#result > p');
+  const selectResult = document.getElementById('selectResult');
 
   const quizSet = shuffle([
     {q: '世界で一番大きな湖は？', c:['カスピ海', 'カリブ海', '琵琶湖']},
@@ -75,6 +76,8 @@
     if (currentNum === quizSet.length -1){
       scoreLabel.textContent = `Score: ${score} / ${quizSet.length}`;
       result.classList.remove('hidden');
+      // formを出現させる
+      selectResult.classList.remove('hidden');
     } else {
       currentNum++;
       setQuiz();
