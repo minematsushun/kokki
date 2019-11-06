@@ -18,7 +18,10 @@
             %li.user_top_info__name
               = "#{current_user.name} さんのKOKKI "
             %li.user_top_info__point
-              = "#{Point.where(user_id: current_user.id).count} ポイント"
+              - if (Point.where(user_id: current_user.id).count != nil)
+                = "#{Point.where(user_id: current_user.id).count} ポイント"
+              - else
+                0 ポイント
           = link_to 'プロフィール変更', edit_user_registration_path
           = link_to "ログアウト", destroy_user_session_path, method: :delete
         - else

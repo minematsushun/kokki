@@ -3,10 +3,11 @@
   #btn ?
   #selectResult.hidden
     .form
-      = form_for (@point) do |f|
+      = form_with model: @point, id: :kokki_form do |f|
         .form_num.display_none
           = f.label :ポイント
           = f.number_field :point, value: 1
         .form_sumbit
-          = f.submit "KOKKI!"
+          = f.submit "KOKKI!" ,class: "kokki_btn"
+
 = javascript_include_tag 'games/omikuji.js'
