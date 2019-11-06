@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "omikuji" => "games#omikuji"
   get "slot" => "games#slot"
   get "touch" => "games#touch"
+  resources :points, only: :create
 end
