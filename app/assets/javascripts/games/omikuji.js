@@ -12,12 +12,15 @@
     if (btn.textContent === "解放"){
       btn.classList.add('unhappy');
       // formを出現させる
-      selectResult.classList.remove('hidden');
+      setTimeout(function(){
+        selectResult.classList.remove('hidden');
+      }, 500)
     } else {
       btn.classList.remove('unhappy');
     }
   });
 }
+
 
 $(document).on('turbolinks:load',function(){
 
@@ -28,12 +31,11 @@ $(document).on('turbolinks:load',function(){
 
 
 
-  $("#kokki_form").on('submit', function(e){
+  $("#kokki_form").on('submit', function onsubmit(e){
     e.preventDefault();
     let point = new FormData(this);
     let url = $(this).attr('action');
-
-    console.log(this)
+    $(this).off("submit", onsubmit).on("submit",false); //formの２回送信を防ぐ
     $.ajax({
       url: url,
       type: "POST",
@@ -43,10 +45,13 @@ $(document).on('turbolinks:load',function(){
       contentType: false
     })
     .done(function(data){
-      console.log("point",data)
       let html = buildHtml(data);
       $('.user_top_info__point').text(html);
+      $('form')[0].reset();
     });
     return false;  //フォームが２回送られてしまうのを強制的にストップさせる
   });
+
+  $("#kokki_form").off('submit');
+
 });

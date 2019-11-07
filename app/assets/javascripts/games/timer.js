@@ -48,6 +48,10 @@
     setButtonStateRunning();
     startTime = Date.now();
     countUp();
+    // formを出現させる
+    setTimeout(function(){
+      selectResult.classList.remove('hidden');
+    }, 10000)
   });
 
   stop.addEventListener('click', () => {
