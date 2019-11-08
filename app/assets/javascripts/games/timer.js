@@ -51,7 +51,7 @@
     // formを出現させる
     setTimeout(function(){
       selectResult.classList.remove('hidden');
-    }, 10000)
+    }, 5000)
   });
 
   stop.addEventListener('click', () => {
@@ -72,3 +72,4 @@
     elapsedTime = 0;
   });
 }
+

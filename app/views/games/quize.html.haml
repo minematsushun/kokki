@@ -8,11 +8,7 @@
       %p
       %a{:href => ""} Replay?
   #selectResult.hidden
-    .form
-      = form_for (@point) do |f|
-        .form_num.display_none
-          = f.label :ポイント
-          = f.number_field :point, value: 1
-        .form_sumbit
-          = f.submit "KOKKI!"
+    = render "layouts/result"
+
 = javascript_include_tag 'games/quize.js'
+= javascript_include_tag 'games/point_up.js'
