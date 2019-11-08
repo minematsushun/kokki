@@ -5,7 +5,7 @@ class PointsController < ApplicationController
       @points = Point.where(user_id: current_user.id).count
       # binding.pry
       respond_to do |format|
-        format.html #{redirect_to omikuji_path}
+        format.html #{redirect_to root_path}
         format.json { render json: @points}
       end
     else

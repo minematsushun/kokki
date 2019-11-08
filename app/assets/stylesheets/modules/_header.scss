@@ -21,6 +21,17 @@ header{
       display: flex;
       &>li{
         margin-right: 20px;
+        height: 60px;
+      }
+      .point_1up{
+        color: $red1;
+        background: $yellow1;
+        transition: .8s;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        padding-right: 10px;
+        padding-left: 10px;
       }
     }
     a {

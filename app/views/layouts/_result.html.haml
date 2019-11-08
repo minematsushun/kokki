@@ -1,0 +1,15 @@
+.message
+  %h3 未来の自分に投資する？
+.form
+  = form_with model: @point, id: :kokki_form do |f|
+    .form_num.display_none
+      = f.label :ポイント
+      = f.number_field :point, value: 1
+    .form_sumbit
+      = f.submit "KOKKI!" ,id: "kokki_btn"
+.select_btn
+  %ul
+    %li
+      = link_to "TOPへ", root_path, class: "to_top"
+    %li.to_youtube
+      = link_to "今日はいいや！", "https://www.youtube.com/"

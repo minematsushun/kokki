@@ -27,6 +27,10 @@
 
         if (this.game.getCurrentNum() === this.game.getLevel() ** 2) {
           clearTimeout(this.game.getTimeoutId());
+          // formを出現させる
+          setTimeout(function(){
+            selectResult.classList.remove('hidden');
+          }, 500)
         }
       }
     }
