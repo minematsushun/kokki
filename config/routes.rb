@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "games#index"
+  resources :games do
+
   get "games" => "games#index"
   get "quize" => "games#quize"
   get "timer" => "games#timer"
